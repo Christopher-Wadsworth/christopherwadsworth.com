@@ -3359,6 +3359,7 @@ input, select, textarea {
 
 /* Hover effect: enlarge image slightly */
 .image-grid a:hover img {
-  transform: scale(1.05);
+  transform: scale(1.55);
 }
+
 
