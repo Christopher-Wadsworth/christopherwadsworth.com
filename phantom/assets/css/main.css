@@ -3342,7 +3342,7 @@ body, html {
 
 /* ===== Hover zoom ===== */
 .image-grid .grid-item:hover img {
-  transform: scale(1.05);
+  transform: scale(2.05);
 }
 
 /* ===== Responsive squares automatically adjust ===== */
@@ -3369,6 +3369,7 @@ body, html {
 			}
 
 		}
+
 
 
 
