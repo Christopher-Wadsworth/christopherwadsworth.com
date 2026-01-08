@@ -3325,7 +3325,7 @@ body, html {
 
 /* ===== Each grid item ===== */
 .image-grid .grid-item {
-    position: relative;       /* needed for absolute img inside */
+    position: absolute;       /* needed for absolute img inside */
     flex: 1 0 25%;            /* 4 per row, adjust as needed */
     overflow: hidden;
     height: 200px;             /* fixed height for uniform grid */
@@ -3346,7 +3346,7 @@ body, html {
 
 /* ===== Hover zoom effect ===== */
 .image-grid .grid-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.55);
 }
 
 /* ===== Responsive adjustments ===== */
@@ -3381,6 +3381,7 @@ body, html {
 			}
 
 		}
+
 
 
 
