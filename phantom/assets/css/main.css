@@ -3330,22 +3330,22 @@ input, select, textarea {
 		}
 
 
-
-
-/* Grid container */
+/* Container reset */
 .image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0; /* no spacing between squares */
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-/* Each image link */
+/* Each square */
 .image-grid a {
+  flex: 1 0 20%; /* 20% width each, adjusts to fit 5 per row */
   position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1; /* makes each item a perfect square */
   overflow: hidden;
-  display: block;
+  aspect-ratio: 1 / 1; /* keeps square */
+  margin: 0; /* no gaps */
+  transition: flex 0.3s ease; /* smoothly expands */
 }
 
 /* Images */
@@ -3357,9 +3357,12 @@ input, select, textarea {
   transition: transform 0.3s ease;
 }
 
-/* Hover effect: enlarge image slightly */
-.image-grid a:hover img {
-  transform: scale(1.55);
+/* Hover effect: expand the square */
+.image-grid a:hover {
+  flex: 1 0 25%; /* enlarge square on hover */
+  z-index: 1;    /* bring in front */
 }
 
-
+.image-grid a:hover img {
+  transform: scale(1.05); /* subtle zoom inside square */
+}
