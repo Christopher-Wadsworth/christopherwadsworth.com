@@ -3329,40 +3329,51 @@ input, select, textarea {
 
 		}
 
-/* Grid container */
+
+
+
+
+
+
+
+
+
+
+			/* Container */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  grid-auto-rows: 180px; /* squares */
-  gap: 0; /* no spacing */
+  gap: 0; /* no gaps */
 }
 
-/* Each link / cell */
-.image-grid a {
-  display: block;
+/* Each square */
+.grid-item {
   position: relative;
+  width: 100%;
+  padding-top: 100%; /* makes square */
   overflow: hidden;
-  cursor: pointer;
+  display: block;
   transition: transform 0.3s ease;
 }
 
-/* Images inside the cells */
-.image-grid img {
+/* Image inside the square */
+.grid-item img {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   transition: transform 0.4s ease, filter 0.4s ease;
-  backface-visibility: hidden; /* smooth scaling */
+  backface-visibility: hidden; /* smoother scaling */
 }
 
-/* Hover: lift and scale */
-.image-grid a:hover {
-  z-index: 2; /* bring above neighbors */
-  transform: scale(1.05); /* lifts cell slightly */
+/* Hover: lift and scale image */
+.grid-item:hover {
+  z-index: 2; /* above neighbors */
 }
 
-.image-grid a:hover img {
-  transform: scale(1.1); /* subtle zoom inside */
-  filter: brightness(1.05); /* optional: brighten for emphasis */
+.grid-item:hover img {
+  transform: scale(1.91); /* zoom effect */
+  filter: brightness(1.95); /* subtle highlight */
 }
+
