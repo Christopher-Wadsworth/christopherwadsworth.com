@@ -3329,40 +3329,40 @@ input, select, textarea {
 
 		}
 
-
-/* Container reset */
+/* Grid container */
 .image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-auto-rows: 180px; /* squares */
+  gap: 0; /* no spacing */
 }
 
-/* Each square */
+/* Each link / cell */
 .image-grid a {
-  flex: 1 0 20%; /* 20% width each, adjusts to fit 5 per row */
+  display: block;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1; /* keeps square */
-  margin: 0; /* no gaps */
-  transition: flex 0.3s ease; /* smoothly expands */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Images */
+/* Images inside the cells */
 .image-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  backface-visibility: hidden; /* smooth scaling */
 }
 
-/* Hover effect: expand the square */
+/* Hover: lift and scale */
 .image-grid a:hover {
-  flex: 1 0 25%; /* enlarge square on hover */
-  z-index: 1;    /* bring in front */
+  z-index: 2; /* bring above neighbors */
+  transform: scale(1.05); /* lifts cell slightly */
 }
 
 .image-grid a:hover img {
-  transform: scale(1.05); /* subtle zoom inside square */
+  transform: scale(1.1); /* subtle zoom inside */
+  filter: brightness(1.05); /* optional: brighten for emphasis */
 }
