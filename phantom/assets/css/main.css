@@ -3310,64 +3310,35 @@ input, select, textarea {
 						margin-top: 0;
 					}
 			
-/* ===== Reset default spacing ===== */
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-/* ===== Grid container ===== */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 200px; /* keeps squares */
+  grid-auto-rows: 200px;
   gap: 0;
-  overflow: visible;      /* allows hover image to overflow neighbors */
 }
 
-/* ===== Each grid item ===== */
-.image-grid .grid-item {
+.grid-item {
+  overflow: hidden;       /* contain the scale */
   position: relative;
-  overflow: hidden;
   display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-/* ===== Image fills the item ===== */
-.image-grid .grid-item img {
+.grid-item .img-wrapper {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+}
+
+.grid-item img {
+  display: block;         /* makes image block-level */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* crop image to fill container */
   transition: transform 0.3s ease;
 }
 
-/* ===== Hover zoom & pop out ===== */
-.image-grid.grid-item:hover {
-  z-index: 2;                 /* bring hovered item on top */
-}
-
-.image-grid grid-item:hover img {
-  transform: scale(1.15);     /* enlarge more for “pop-out” effect */
-}
-
-/* ===== Optional subtle shadow ===== */
-.image-grid.grid-item:hover img {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-/* ===== Responsive adjustments ===== */
-@media screen and (max-width: 980px) {
-  .image-grid {
-    grid-auto-rows: 180px;
-  }
-}
-
-@media screen and (max-width: 736px) {
-  .image-grid {
-    grid-auto-rows: 150px;
-  }
+.grid-item:hover img {
+  transform: scale(1.1);  /* hover zoom works reliably */
+  z-index: 2;             /* pop above others if needed */
 }
 
 			
@@ -3387,6 +3358,7 @@ body, html {
 			}
 
 		}
+
 
 
 
