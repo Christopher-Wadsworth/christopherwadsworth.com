@@ -3335,27 +3335,26 @@ input, select, textarea {
 
 
 
-
-
-
 .image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0; /* no spacing between images */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* adjust size */
+  grid-gap: 0; /* no gaps */
 }
 
 .image-grid a {
   display: block;
-  overflow: visible; /* allows scale to show */
+  overflow: hidden; /* clip overflow for nice scale effect */
 }
 
 .image-grid img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* maintain aspect ratio and fill box */
   transition: transform 0.3s ease;
 }
 
 .image-grid a:hover img {
-  transform: scale(1.1); /* enlarge slightly */
+  transform: scale(1.1);
 }
+
