@@ -3344,16 +3344,16 @@ body, html {
 }
 
 /* ===== Hover zoom & pop out ===== */
-.image-grid .grid-item:hover {
+.image-grid.grid-item:hover {
   z-index: 2;                 /* bring hovered item on top */
 }
 
-.image-grid .grid-item:hover img {
+.image-grid grid-item:hover img {
   transform: scale(1.15);     /* enlarge more for “pop-out” effect */
 }
 
 /* ===== Optional subtle shadow ===== */
-.image-grid .grid-item:hover img {
+.image-grid.grid-item:hover img {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
@@ -3387,6 +3387,7 @@ body, html {
 			}
 
 		}
+
 
 
 
