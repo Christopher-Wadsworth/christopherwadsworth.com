@@ -3310,27 +3310,63 @@ input, select, textarea {
 						margin-top: 0;
 					}
 
-		}
-#main .thumb {
-  position: relative;
-  width: 33.333%;
-  height: 20em;   /* adjust if needed */
-  float: left;
-  overflow: hidden;
+
+			/* ===== Donor Thumbs Section ===== */
+.donor-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1em; /* negative margin to counteract padding on tiles */
 }
 
-#main .thumb > .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.donor-tiles .thumb {
+    position: relative;
+    width: 33.333%; /* 3 tiles per row on desktop */
+    padding: 1em;   /* spacing between tiles */
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-/* Wrapper */
+.donor-tiles .thumb > .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.donor-tiles .thumb h2,
+.donor-tiles .thumb p {
+    position: relative;
+    z-index: 1;
+    padding: 0.5em;
+    color: white; /* adjust if your base template uses dark backgrounds */
+}
+
+/* Optional hover effect */
+.donor-tiles .thumb:hover h2,
+.donor-tiles .thumb:hover p {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 980px) {
+    .donor-tiles .thumb {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .donor-tiles .thumb {
+        width: 100%;
+    }
+}
+
+			
+			/* Wrapper */
 
 	#wrapper > * > .inner {
 		width: 100%;
@@ -3346,3 +3382,4 @@ input, select, textarea {
 			}
 
 		}
+
