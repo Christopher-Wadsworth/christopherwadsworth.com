@@ -3338,42 +3338,24 @@ input, select, textarea {
 
 
 
-
-			/* Container */
 .image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0; /* no gaps */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* no spacing between images */
 }
 
-/* Each square */
-.grid-item {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* makes square */
-  overflow: hidden;
+.image-grid a {
   display: block;
+  overflow: visible; /* allows scale to show */
+}
+
+.image-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
-/* Image inside the square */
-.grid-item img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  backface-visibility: hidden; /* smoother scaling */
+.image-grid a:hover img {
+  transform: scale(1.1); /* enlarge slightly */
 }
-
-/* Hover: lift and scale image */
-.grid-item:hover {
-  z-index: 2; /* above neighbors */
-}
-
-.grid-item:hover img {
-  transform: scale(1.91); /* zoom effect */
-  filter: brightness(1.95); /* subtle highlight */
-}
-
