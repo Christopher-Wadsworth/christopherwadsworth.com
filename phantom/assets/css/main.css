@@ -3309,59 +3309,47 @@ input, select, textarea {
 					#footer > .inner .copyright li:first-child {
 						margin-top: 0;
 					}
+			
 /* ===== Reset default spacing ===== */
 body, html {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* ===== Grid container ===== */
 .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px; /* makes squares */
+  gap: 0;                /* no gap at all */
 }
 
 /* ===== Each grid item ===== */
 .image-grid .grid-item {
-    position: absolute;       /* needed for absolute img inside */
-    flex: 1 0 25%;            /* 4 per row, adjust as needed */
-    overflow: hidden;
-    height: 200px;             /* fixed height for uniform grid */
+  position: relative;
+  overflow: hidden;
+  display: block;      /* ensures link fills the cell */
 }
 
-/* ===== Image inside each grid item ===== */
+/* ===== Image fills the item ===== */
 .image-grid .grid-item img {
-    position: absolute;        /* fill the grid-item completely */
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-    padding: 0;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* crop images to fill square */
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-/* ===== Hover zoom effect ===== */
+/* ===== Hover zoom ===== */
 .image-grid .grid-item:hover img {
-    transform: scale(1.55);
+  transform: scale(1.05);
 }
 
-/* ===== Responsive adjustments ===== */
-@media screen and (max-width: 980px) {
-    .image-grid .grid-item {
-        flex: 1 0 50%;  /* 2 per row */
-        height: 180px;
-    }
-}
-
+/* ===== Responsive squares automatically adjust ===== */
 @media screen and (max-width: 736px) {
-    .image-grid .grid-item {
-        flex: 1 0 100%; /* 1 per row */
-        height: 160px;
-    }
+  .image-grid {
+    grid-auto-rows: 150px; /* smaller squares on mobile */
+  }
 }
 
 			
@@ -3381,6 +3369,7 @@ body, html {
 			}
 
 		}
+
 
 
 
