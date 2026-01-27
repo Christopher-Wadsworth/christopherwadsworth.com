@@ -153,7 +153,7 @@ input, select, textarea {
 		a:hover {
 			border-bottom-color: transparent;
 			color: #f2849e !important;
-			transform: scale(1.2) !important;
+			transform: scale(1.05) !important;
 		}
 
 	strong, b {
@@ -3329,6 +3329,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
