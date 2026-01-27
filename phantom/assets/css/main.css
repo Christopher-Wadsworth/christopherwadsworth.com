@@ -3335,9 +3335,10 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #ffffff !important;
-			transform: scale(1.2) !important;
+			color: #f2849e !important;
+			transform: scale(2) !important;
 		}
+
 
 
 
