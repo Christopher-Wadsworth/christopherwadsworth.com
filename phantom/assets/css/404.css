@@ -32,3 +32,21 @@
     margin: 20px 0;
     display: inline-block;}
 	.contant_box_404{ margin-top:-50px;}
+
+
+a {
+		-moz-transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
+		-webkit-transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
+		-ms-transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
+		display: inline-block;
+		transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
+		text-decoration: none;
+		color: #585858;
+		border-bottom: dotted 0px rgba(88, 88, 88, 0.5);
+	}
+
+		a:hover {
+			border-bottom-color: transparent;
+			color: #585858 !important;
+			transform: scale(1) !important;
+		}
