@@ -110,7 +110,7 @@ input, select, textarea {
 			-moz-transition: none !important;
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
-			transition: transform 0.2s, color 0.2s !important;
+			transition: none !important;
 		}
 
 /* Type */
@@ -147,6 +147,7 @@ input, select, textarea {
 		text-decoration: none;
 		color: #585858;
 		border-bottom: dotted 0px rgba(88, 88, 88, 0.5);
+		transition: transform 0.2s, color 0.2s;
 	}
 
 		a:hover {
@@ -3338,6 +3339,7 @@ input, select, textarea {
 			color: #f2849e !important;
 			transform: scale(2) !important;
 		}
+
 
 
 
