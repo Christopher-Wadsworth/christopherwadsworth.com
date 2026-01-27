@@ -110,7 +110,7 @@ input, select, textarea {
 			-moz-transition: none !important;
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
-			transition: none !important;
+			transition: transform 0.2s, color 0.2s !important;
 		}
 
 /* Type */
@@ -3338,6 +3338,7 @@ input, select, textarea {
 			color: #f2849e !important;
 			transform: scale(2) !important;
 		}
+
 
 
 
