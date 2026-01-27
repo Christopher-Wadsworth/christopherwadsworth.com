@@ -47,6 +47,6 @@ a {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #585858 !important;
-			transform: scale(1) !important;
+			color: #ffffff !important;
+			transform: scale(1.05) !important;
 		}
