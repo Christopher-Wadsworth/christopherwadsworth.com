@@ -140,9 +140,9 @@ input, select, textarea {
 		}
 
 	a {
-		-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-		-webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-		-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+		-moz-transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
+		-webkit-transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
+		-ms-transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
 		transition: transform 0.2s ease, border-bottom-color 0.2s ease, color 0.2s ease;
 		text-decoration: none;
 		color: #585858;
@@ -3328,6 +3328,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
