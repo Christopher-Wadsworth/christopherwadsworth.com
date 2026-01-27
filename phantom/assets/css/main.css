@@ -3330,3 +3330,7 @@ input, select, textarea {
 
 
 
+p {
+  color: blue;
+  font-size: 16px;
+}
