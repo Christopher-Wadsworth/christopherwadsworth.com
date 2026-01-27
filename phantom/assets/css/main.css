@@ -143,11 +143,10 @@ input, select, textarea {
 		-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		-webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-		transition: border-bottom-color 0.2s ease, color 0.2s ease;
+		transition: transform 0.2s, border-bottom-color 0.2s ease, color 0.2s ease;
 		text-decoration: none;
 		color: #585858;
-		border-bottom: dotted 0px rgba(88, 88, 88, 0.5);
-		transition: transform 0.2s, color 0.2s;
+		border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
 	}
 
 		a:hover {
@@ -3328,16 +3327,6 @@ input, select, textarea {
 				padding: 0 1.25em;
 			}
 
-		}
-
-
-
-
-
-		a:hover {
-			border-bottom-color: transparent;
-			color: #f2849e !important;
-			transform: scale(2) !important;
 		}
 
 
