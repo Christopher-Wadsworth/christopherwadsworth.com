@@ -128,10 +128,6 @@ input, select, textarea {
 		line-height: 1.75;
 	}
 
-
-	p {
-line-height:-.5;
-}
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
@@ -3339,6 +3335,7 @@ line-height:-.5;
 			}
 
 		}
+
 
 
 
