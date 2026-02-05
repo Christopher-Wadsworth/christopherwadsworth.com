@@ -36,20 +36,9 @@
 						</div>
 					</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="./">Home</a></li>
-							<li><a href="Educ235">Education 235</a></li>
-							<li><a href="OnlineLearningProviders">Online Learning Providers</a></li>
-            			    <li><a href="ExploratoryLearningSites">Exploratory Learning Sites</a></li>
-              				<li><a href="VirtualFieldTrips">Virtual Field Trips</a></li>
-							<li><a href="Podcast">Podcast</a></li>
-					    	<li><a href="CuratedVideoResources">Curated Video Resources</a></li>
-					
-						</ul>
-					</nav>
+					<!-- Menu -->
+					<nav id="Educmenu"></nav>
+
 
 				<!-- Main -->
 					<div id="main">
@@ -71,37 +60,39 @@
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							
-	<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
+						<!-- Footer -->
+					<div id="footer"></div>
 			</div>
 
 		<!-- Scripts -->
+	<script>
+		// Load menu
+
+  fetch('Educmenu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('Educmenu').innerHTML = data;
+    });
+
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+	
+
+
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 
