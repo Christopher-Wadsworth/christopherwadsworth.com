@@ -211,6 +211,9 @@ input, select, textarea {
 		letter-spacing: 0.1em;
 	}
 
+span {
+	letter-spacing: 0.1em;
+}
 		h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 		}
@@ -3335,6 +3338,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
