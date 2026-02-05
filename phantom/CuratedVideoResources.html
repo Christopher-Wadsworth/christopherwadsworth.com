@@ -27,7 +27,7 @@
 								</div>
 
 							<!-- Nav -->
-								<nav>
+							<nav>
 									<ul>
 										<li><a href="#menu">Menu</a></li>
 									</ul>
@@ -87,9 +87,13 @@
 
 		<script>
   // Load menu
+
   fetch('menu.html')
     .then(response => response.text())
-    .then(data => document.getElementById('menu').innerHTML = data);
+    .then(data => {
+      document.getElementById('menu').innerHTML = data;
+    });
+
 
   // Load footer
   fetch('footer.html')
