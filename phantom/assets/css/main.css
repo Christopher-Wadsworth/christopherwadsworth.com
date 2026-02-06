@@ -2725,7 +2725,7 @@ span {
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #c6e3ff;
+				background-color: #ef7a9f;
 			}
 
 			.tiles article.style4 > .image:before {
@@ -2741,7 +2741,7 @@ span {
 			}
 
 			.tiles article.style7 > .image:before {
-				background-color: #f285d1;
+				background-color: #ddfc99;
 			}
 
 			.tiles article.style8 > .image:before {
@@ -2772,7 +2772,7 @@ span {
 			}
 
 			.tiles article.style15 > .image:before {
-				background-color: #7bd0c1;
+				background-color: #80fccf;
 			
 			}
 			body:not(.is-touch) .tiles article:hover > .image {
@@ -3382,6 +3382,7 @@ span {
 			}
 
 		}
+
 
 
 
