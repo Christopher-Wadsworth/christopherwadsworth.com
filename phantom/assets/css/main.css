@@ -2740,6 +2740,41 @@ span {
 				background-color: #8499e7;
 			}
 
+			.tiles article.style7 > .image:before {
+				background-color: #f2849e;
+			}
+
+			.tiles article.style8 > .image:before {
+				background-color: #7ecaf6;
+			}
+
+			.tiles article.style9 > .image:before {
+				background-color: #7bd0c1;
+			}
+
+			.tiles article.style10 > .image:before {
+				background-color: #c75b9b;
+			}
+
+			.tiles article.style11 > .image:before {
+				background-color: #ae85ca;
+			}
+
+			.tiles article.style12 > .image:before {
+				background-color: #8499e7;
+			
+			}.tiles article.style13 > .image:before {
+				background-color: #f2849e;
+			}
+
+			.tiles article.style14 > .image:before {
+				background-color: #7ecaf6;
+			}
+
+			.tiles article.style15 > .image:before {
+				background-color: #7bd0c1;
+			
+			}
 			body:not(.is-touch) .tiles article:hover > .image {
 				-moz-transform: scale(1.1);
 				-webkit-transform: scale(1.1);
@@ -3347,6 +3382,7 @@ span {
 			}
 
 		}
+
 
 
 
