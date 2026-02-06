@@ -2725,7 +2725,7 @@ span {
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #d7c7fc;
+				background-color: #c6e3ff;
 			}
 
 			.tiles article.style4 > .image:before {
@@ -2741,7 +2741,7 @@ span {
 			}
 
 			.tiles article.style7 > .image:before {
-				background-color: #d2b3f9;
+				background-color: #f285d1;
 			}
 
 			.tiles article.style8 > .image:before {
@@ -2757,7 +2757,7 @@ span {
 			}
 
 			.tiles article.style11 > .image:before {
-				background-color: #f49775;
+				background-color: #d7c7fc;
 			}
 
 			.tiles article.style12 > .image:before {
@@ -3382,6 +3382,7 @@ span {
 			}
 
 		}
+
 
 
 
