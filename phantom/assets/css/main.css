@@ -2772,7 +2772,7 @@ span {
 			}
 
 			.tiles article.style15 > .image:before {
-				background-color: #80fccf;
+				background-color: #f79c6f;
 			
 			}
 			body:not(.is-touch) .tiles article:hover > .image {
@@ -3382,6 +3382,7 @@ span {
 			}
 
 		}
+
 
 
 
