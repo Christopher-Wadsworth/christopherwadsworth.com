@@ -1,1 +1,100 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Self Learning - Christopher Wadsworth </title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<div class="logo">
+									<span class="symbol"><img src="images/Logo.svg" alt="" /></span><span class="title">Self Learning</span>
+								</div>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+						<nav id="menu"></nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Assignment Description</h1>
+							<p>This assignment is for starting to create a depository of exploratory learning sites for future use in the classroom. Exploratory learning sites are content-focused, so a student can explore different ideas that pique their interest instead of guided lessons.</p>
+							
+							<h3><a href="https://thecrashcourse.com/courses/" target="_blank">Site 1 - Crash Course</h3>
+								<img src="images/Educ235/CrashCourseHomepage.png" alt="" width="550" height="294"/>
+						</a>
+									<p>Crash Course is a company focused on giving free educational videos to everyone. It hosts its videos through a YouTube channel but can be watched and organized on their website. It was chosen because of how trusted it is as a source of learning for so many people, with over 45 courses and 2 million subscribers. In the classroom, videos can be shown to students before the lesson to get them interested and make sure they have a base level of understanding of the topic.</p>
+							<h3><a href="https://www.abcya.com/grades/5/" target="_blank">Site 2 - ABCya</h3>
+								<img src="images/Educ235/ABCya.png" alt="" width="683" height="292"/>
+						</a>		
+									<p>ABCya is a company associated with IXL that has hundreds of learning games for all ages. It was chosen for its wide array of games that students can play while passively learning. In the classroom, during breaks or when students have free time, like after a test, if they don't have other things to do, they can be allowed to play on the site.</p>
+							<h3><a href="https://ocw.mit.edu/search/" target="_blank">Site 3 - MIT OpenCourseWare</h3>
+								<img src="images/Educ235/MITOpenCourseWare.png" alt="" width="683" height="292"/>
+						</a>
+									<p>MIT OpenCourseWare is a directory of MIT courses that have been released to the public with all of the materials that were used in the course. It was chosen because of how in-depth and versatile the courses are. With a wide range of content at a high level, this can be used for spiral learning by giving students end problems that they likely won't be able to solve until high school or college. These advanced concepts can also help to give students an idea of what they find interesting and may want to do for a career.</p>
+						</div>
+					</div>
+
+				</section>
+
+						</div>
+					</div>
+
+						<!-- Footer -->
+					<div id="footer"></div>
+			</div>
+
+		<!-- Scripts -->
+	<script>
+		// Load menu
+
+  fetch('Educmenu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu').innerHTML = data;
+    });
+
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+		
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	
+
+
+	</body>
+</html>
