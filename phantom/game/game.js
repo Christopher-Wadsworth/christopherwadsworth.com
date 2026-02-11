@@ -122,10 +122,6 @@ function placeFood() {
     //in y coordinates.
     foodY = Math.floor(Math.random() * total_row) * blockSize; 
 }
-function reset(e) {
-    if (e.code == "ArrowUp" && speedY != 1) { 
-        // If up arrow key pressed with this condition...
-        // snake will not move in the opposite direction
-        speedX = 0;
-        speedY = -1;
-    }
+//function reset(e) {
+  //  if (e.code == "ArrowUp" && speedY != 1) { 
+//    }
