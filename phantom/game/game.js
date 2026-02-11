@@ -125,7 +125,6 @@ function placeFood() {
 }
 function restart(e) {
     if(e.code == "Space") {
-        length=1
         snakeBody[i] = snakeBody [1]
         context.fillStyle = "Green";
         context.fillRect(0, 0, board.width, board.height);
