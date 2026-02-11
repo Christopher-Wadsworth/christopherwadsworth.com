@@ -3394,13 +3394,18 @@ span {
 
 
 
-#main .image > .clickable {
+#main .clickable:active {
 				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
-		
-
+				border: 0;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				}
 
 
 
