@@ -124,7 +124,7 @@ function placeFood() {
     foodY = Math.floor(Math.random() * total_row) * blockSize; 
 }
 function restart(e) {
-    if(e.code == "Space" && gameOver == true) {
+    if(e.code == "Space") {
         length=1
         snakeBody[i] = snakeBody [1]
         context.fillStyle = "Green";
