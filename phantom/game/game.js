@@ -123,7 +123,7 @@ function placeFood() {
     //in y coordinates.
     foodY = Math.floor(Math.random() * total_row) * blockSize; 
 }
-function restart() {
+function restart(e) {
     if(e.code == "Space" && gameOver == true) {
         length=1
         snakeBody[i] = snakeBody [1]
