@@ -27,6 +27,8 @@ window.onload = function () {
     board.width = total_col * blockSize;
     context = board.getContext("2d");
 
+ document.getElementById("Score").innerText = "Score: " + Score;
+    
     placeFood();
     document.addEventListener("keyup", changeDirection);  //for movements
     document.addEventListener("keyup", reset);
