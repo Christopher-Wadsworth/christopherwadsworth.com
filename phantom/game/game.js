@@ -13,7 +13,7 @@ let speedY = 0;  //speed of snake in Y coordinate.
 
 let snakeBody = [];
 
-let foodImage = new Image();
+let foodImg = new Image();
                 foodImg.src = "Food.png";
 let foodX;
 let foodY;
