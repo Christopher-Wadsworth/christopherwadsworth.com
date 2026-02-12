@@ -127,9 +127,11 @@ function placeFood() {
 
  function reset(e) {
     if (e.code == "Space" ) {
-        gameOver = false;
-        context.fillStyle = "Green";
-        context.fillRect(0, 0, board.width, board.height);  
+        snakeX = 3
+        snakeY = 3  
         snakeBody = []
+        context.fillStyle = "Green";
+        context.fillRect(0, 0, board.width, board.height);
+        gameOver = false;
     }
 }
