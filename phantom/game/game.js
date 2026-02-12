@@ -129,6 +129,8 @@ function placeFood() {
     if (e.code == "Space" ) {
         snakeX = blockSize * 5
         snakeY = blockSize * 5
+        speedX = 0
+        speedY = 0
         snakeBody = []
         context.fillStyle = "Green";
         context.fillRect(0, 0, board.width, board.height);
