@@ -53,6 +53,7 @@ function update() {
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
         Score += 1 
+         document.getElementById("Score").innerText = "Score: " + Score;
         placeFood();
     }
 
@@ -138,6 +139,8 @@ function placeFood() {
         snakeY = blockSize * 5
         speedX = 0
         speedY = 0
+        Score = 0
+         document.getElementById("Score").innerText = "Score: " + Score;
         snakeBody = []
         context.fillStyle = "Green";
         context.fillRect(0, 0, board.width, board.height);
