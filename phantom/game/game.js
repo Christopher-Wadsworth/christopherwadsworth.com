@@ -13,6 +13,8 @@ let speedY = 0;  //speed of snake in Y coordinate.
 
 let snakeBody = [];
 
+let foodImage = new Image();
+                foodImg.src = "food.png";
 let foodX;
 let foodY;
 
@@ -47,8 +49,7 @@ function update() {
     context.fillRect(0, 0, board.width, board.height);
 
     // Set food color and position
-    context.fillStyle = "yellow";
-    context.fillRect(foodX, foodY, blockSize, blockSize);
+    context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
