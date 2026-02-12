@@ -1,4 +1,4 @@
-let blockSize = 25;
+let blockSize = 50;
 let total_row = 17; //total row number
 let total_col = 17; //total column number
 let board;
