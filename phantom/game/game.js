@@ -16,6 +16,8 @@ let snakeBody = [];
 let foodX;
 let foodY;
 
+let Score = []
+
 let gameOver = false;
 
 window.onload = function () {
@@ -48,6 +50,7 @@ function update() {
 
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
+        Score += 1 
         placeFood();
     }
 
@@ -77,6 +80,7 @@ function update() {
         gameOver = true;
             context.fillStyle = "Red";
             context.fillRect(0, 0, board.width, board.height);
+                Score = 0
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
@@ -86,6 +90,7 @@ function update() {
             gameOver = true;
                 context.fillStyle = "Red";
                 context.fillRect(0, 0, board.width, board.height);
+                    Score = 0
         }
     }
 }
