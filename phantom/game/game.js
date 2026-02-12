@@ -16,7 +16,7 @@ let snakeBody = [];
 let foodX;
 let foodY;
 
-let Score = []
+let Score = 0
 
 let gameOver = false;
 
