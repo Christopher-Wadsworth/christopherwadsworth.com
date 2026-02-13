@@ -80,10 +80,10 @@ function update() {
     for (let i = 0; i < snakeBody.length; i++) {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
     }
-    if (snakeX [] < 0 
-        || snakeX [] > total_col * blockSize 
-        || snakeY [] < 0 
-        || snakeY [] > total_row * blockSize) { 
+    if (snakeX < 0 
+        || snakeX > total_col * blockSize 
+        || snakeY < 0 
+        || snakeY > total_row * blockSize) { 
         
         // Out of bound condition
         gameOver = true;
