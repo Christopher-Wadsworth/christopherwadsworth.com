@@ -4,7 +4,7 @@ let total_col = 19; //total column number
 let board;
 let context;
 
-let snakeX = blockSize * 5;
+let snakeX = blockSize * 10;
 let snakeY = blockSize * 10;
 
 // Set the total number of rows and columns
@@ -152,7 +152,7 @@ function placeFood() {
 
  function reset(e) {
     if (e.code == "Space" ) {
-        snakeX = blockSize * 5
+        snakeX = blockSize * 10
         snakeY = blockSize * 10
         speedX = 0
         speedY = 0
