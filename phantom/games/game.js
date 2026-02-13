@@ -143,7 +143,7 @@ function placeFood() {
         Score = 0
          document.getElementById("Score").innerText = "Score: " + Score;
         snakeBody = []
-        context.fillStyle = "Green";
+        context.fillStyle = "lightgreen";
         context.fillRect(0, 0, board.width, board.height);
         gameOver = false;
     }
