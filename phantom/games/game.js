@@ -49,7 +49,7 @@ function update() {
     }
 
     // Background of a Game
-    context.fillStyle = "green";
+    context.fillStyle = "lightgreen";
     context.fillRect(0, 0, board.width, board.height);
 
     // Set food color and position
