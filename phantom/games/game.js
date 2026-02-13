@@ -49,7 +49,7 @@ function update() {
     }
 
     // Background of a Game
-    context.fillStyle = "1DA11D";
+    context.fillStyle = "#1DA11D";
     context.fillRect(0, 0, board.width, board.height);
 
     // Set food color and position
@@ -143,7 +143,7 @@ function placeFood() {
         Score = 0
          document.getElementById("Score").innerText = "Score: " + Score;
         snakeBody = []
-        context.fillStyle = "1DA11D";
+        context.fillStyle = "#1DA11D";
         context.fillRect(0, 0, board.width, board.height);
         gameOver = false;
     }
