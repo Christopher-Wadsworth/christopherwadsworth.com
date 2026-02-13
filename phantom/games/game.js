@@ -43,7 +43,7 @@ window.onload = function () {
     document.addEventListener("keyup", reset);
 
     // Set snake speed
-    setInterval(update, 105);
+    setInterval(update, 100);
 }
 
 function update() {
