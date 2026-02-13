@@ -146,3 +146,13 @@ function placeFood() {
         gameOver = false;
     }
 }
+
+  window.addEventListener("keydown", function(e) {
+    // Array of key codes or event codes to prevent (arrow keys and spacebar)
+    const keysToPrevent = ["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+    
+    if (keysToPrevent.indexOf(e.code) > -1) {
+      e.preventDefault(); // Stop the browser's default action (scrolling)
+      // You can add your own logic here for what the keys should do instead
+    }
+  }, false);
