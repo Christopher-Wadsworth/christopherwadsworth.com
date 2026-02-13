@@ -29,6 +29,8 @@ let wallDeathImg = new Image()
 let boardImg = new Image()
                 boardImg.src = "SnakeBackgroundGrass.png";
 
+let directionChanged = false
+
 window.onload = function () {
     // Set board height and width
     board = document.getElementById("board");
@@ -50,7 +52,7 @@ function update() {
     if (gameOver) {
         return;
     }
-
+  directionChanged = false
     // Background of a Game
     context.drawImage(boardImg, 0, 0, board.height, board.width)
     // Set food color and position
@@ -102,24 +104,28 @@ function update() {
 
 // Movement of the Snake - We are using addEventListener
 function changeDirection(e) {
-    if (e.code == "ArrowUp" && speedY != 1) { 
+    if (e.code == "ArrowUp" && speedY != 1 && directionChanged == false) { 
         speedX = 0;
         speedY = -1;
+      directionChanged = true
     }
-    else if (e.code == "ArrowDown" && speedY != -1) {
+    else if (e.code == "ArrowDown" && speedY != -1 && directionChanged == false) {
         //If down arrow key pressed
         speedX = 0;
         speedY = 1;
+      directionChanged = true
     }
-    else if (e.code == "ArrowLeft" && speedX != 1) {
+    else if (e.code == "ArrowLeft" && speedX != 1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = -1;
         speedY = 0;
+      directionChanged = true
     }
-    else if (e.code == "ArrowRight" && speedX != -1) { 
+    else if (e.code == "ArrowRight" && speedX != -1 && directionChanged == false) { 
         //If Right arrow key pressed
         speedX = 1;
         speedY = 0;
+      directionChanged = true
     }
 }
 
