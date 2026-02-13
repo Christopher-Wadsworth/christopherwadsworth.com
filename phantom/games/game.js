@@ -52,7 +52,7 @@ function update() {
     }
 
     // Background of a Game
-    context.drawImage(SnakeBackground,0,0,0,0)
+    context.drawImage(SnakeBackground,0,0,board.height,board.width)
     // Set food color and position
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
@@ -144,7 +144,7 @@ function placeFood() {
         Score = 0
             document.getElementById("Score").innerText = "Score: " + Score;
         snakeBody = []
-        context.drawImage(SnakeBackground,0,0,0,0)
+        context.drawImage(SnakeBackground,0,0,board.height,board.width)
         gameOver = false;
     }
 }
