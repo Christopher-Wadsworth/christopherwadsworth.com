@@ -4,7 +4,7 @@ let total_col = 19; //total column number
 let board;
 let context;
 
-let snakeX = blockSize * 10;
+let snakeX = blockSize * 9;
 let snakeY = blockSize * 10;
 
 // Set the total number of rows and columns
