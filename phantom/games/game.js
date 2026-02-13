@@ -143,7 +143,6 @@ function placeFood() {
         for (let i = 0; i < snakeBody.length; i++) {
             if (foodX === snakeBody[i][0] && foodY === snakeBody[i][1]) {
                 validPosition = false;
-                break;
             }
         }
     }
