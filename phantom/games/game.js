@@ -148,7 +148,7 @@ function placeFood() {
     }
 }
 
-}
+
 
  function reset(e) {
     if (e.code == "Space" ) {
