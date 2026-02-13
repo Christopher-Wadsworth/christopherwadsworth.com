@@ -21,8 +21,10 @@ let foodY;
 let Score = 0
 
 let gameOver = false;
-let gameOverImg = new Image()
-                gameOverImg.src = "GameOver.png";
+let selfDeathImg = new Image()
+                selfDeathImg.src = "SelfDeath.png";
+let wallDeathImg = new Image()
+                wallDeathImg.src = "WallDeath.png";
 
 window.onload = function () {
     // Set board height and width
@@ -84,7 +86,7 @@ function update() {
         
         // Out of bound condition
         gameOver = true;
-            context.drawImage(gameOverImg,0,0,board.height,board.width)
+            context.drawImage(wallDeathImg,0,0,board.height,board.width)
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
@@ -92,7 +94,7 @@ function update() {
             
             // Snake eats own body
             gameOver = true;
-                context.drawImage(gameOverImg,0,0,board.height,board.width)
+                context.drawImage(selfDeathImg,0,0,board.height,board.width)
         }
     }
 }
