@@ -63,6 +63,23 @@ function update() {
         placeFood();
     }
 
+
+    // body of snake will grow
+    for (let i = snakeBody.length - 1; i > 0; i--) {
+        // it will store previous part of snake to the current part
+        snakeBody[i] = snakeBody[i - 1];
+    }
+    if (snakeBody.length) {
+        snakeBody[0] = [snakeX, snakeY];
+    }
+
+    context.fillStyle = "white";
+    snakeX += speedX * blockSize; //updating Snake position in X coordinate.
+    snakeY += speedY * blockSize;  //updating Snake position in Y coordinate.
+    context.fillRect(snakeX, snakeY, blockSize, blockSize);
+    for (let i = 0; i < snakeBody.length; i++) {
+        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
+    }
     if (snakeX < 0 
         || snakeX > total_col * blockSize 
         || snakeY < 0 
@@ -82,23 +99,6 @@ function update() {
         }
     }
 }
-    // body of snake will grow
-    for (let i = snakeBody.length - 1; i > 0; i--) {
-        // it will store previous part of snake to the current part
-        snakeBody[i] = snakeBody[i - 1];
-    }
-    if (snakeBody.length) {
-        snakeBody[0] = [snakeX, snakeY];
-    }
-
-    context.fillStyle = "white";
-    snakeX += speedX * blockSize; //updating Snake position in X coordinate.
-    snakeY += speedY * blockSize;  //updating Snake position in Y coordinate.
-    context.fillRect(snakeX, snakeY, blockSize, blockSize);
-    for (let i = 0; i < snakeBody.length; i++) {
-        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
-    }
-
 
 // Movement of the Snake - We are using addEventListener
 function changeDirection(e) {
