@@ -27,7 +27,7 @@ let wallDeathImg = new Image()
                 wallDeathImg.src = "WallDeath.png";
 
 let boardImg = new Image()
-                boardImg.src = "SnakeBackgroundSolid.png";
+                boardImg.src = "SnakeBackgroundGrace.png";
 
 window.onload = function () {
     // Set board height and width
