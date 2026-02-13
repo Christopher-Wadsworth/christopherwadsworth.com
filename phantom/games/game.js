@@ -52,7 +52,7 @@ function update() {
     }
 
     // Background of a Game
-    context.drawImage(SnakeBackground,0,0,board.height,board.width)
+    context.drawImage(boardImg, 0, 0, board.height, board.width)
     // Set food color and position
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
@@ -87,7 +87,7 @@ function update() {
         
         // Out of bound condition
         gameOver = true;
-            context.drawImage(wallDeathImg,0,0,board.height,board.width)
+            context.drawImage(wallDeathImg, 0, 0, board.height, board.width)
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
@@ -144,7 +144,7 @@ function placeFood() {
         Score = 0
             document.getElementById("Score").innerText = "Score: " + Score;
         snakeBody = []
-        context.drawImage(SnakeBackground,0,0,board.height,board.width)
+        context.drawImage(boardImg,0,0,board.height,board.width)
         gameOver = false;
     }
 }
