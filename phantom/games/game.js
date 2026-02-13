@@ -43,7 +43,7 @@ window.onload = function () {
     document.addEventListener("keyup", reset);
 
     // Set snake speed
-    setInterval(update, 80);
+    setInterval(update, 90);
 }
 
 function update() {
@@ -102,25 +102,23 @@ function update() {
 
 // Movement of the Snake - We are using addEventListener
 function changeDirection(e) {
-    if (e.code == "ArrowUp" && speedY != 1) { 
-        // If up arrow key pressed with this condition...
-        // snake will not move in the opposite direction
+    if (e.code == "ArrowUp" && speedY != >0) { 
         speedX = 0;
-        speedY = -.8;
+        speedY = -.9;
     }
-    else if (e.code == "ArrowDown" && speedY != -1) {
+    else if (e.code == "ArrowDown" && speedY != <0) {
         //If down arrow key pressed
         speedX = 0;
-        speedY = .8;
+        speedY = .9;
     }
-    else if (e.code == "ArrowLeft" && speedX != 1) {
+    else if (e.code == "ArrowLeft" && speedX != >0) {
         //If left arrow key pressed
-        speedX = -.8;
+        speedX = -.9;
         speedY = 0;
     }
-    else if (e.code == "ArrowRight" && speedX != -1) { 
+    else if (e.code == "ArrowRight" && speedX != <0) { 
         //If Right arrow key pressed
-        speedX = .8;
+        speedX = .9;
         speedY = 0;
     }
 }
