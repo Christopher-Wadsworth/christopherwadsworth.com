@@ -125,14 +125,30 @@ function changeDirection(e) {
     }
 }
 
-// Randomly place food
 function placeFood() {
+    let validPosition = false;
 
-    // in x coordinates.
-    foodX = Math.floor(Math.random() * total_col) * blockSize; 
-    
-    //in y coordinates.
-    foodY = Math.floor(Math.random() * total_row) * blockSize; 
+    while (!validPosition) {
+        foodX = Math.floor(Math.random() * total_col) * blockSize;
+        foodY = Math.floor(Math.random() * total_row) * blockSize;
+
+        validPosition = true;
+
+        // check against snake head
+        if (foodX === snakeX && foodY === snakeY) {
+            validPosition = false;
+        }
+
+        // check against snake body
+        for (let i = 0; i < snakeBody.length; i++) {
+            if (foodX === snakeBody[i][0] && foodY === snakeBody[i][1]) {
+                validPosition = false;
+                break;
+            }
+        }
+    }
+}
+
 }
 
  function reset(e) {
