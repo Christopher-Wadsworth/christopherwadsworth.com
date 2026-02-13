@@ -26,6 +26,9 @@ let selfDeathImg = new Image()
 let wallDeathImg = new Image()
                 wallDeathImg.src = "WallDeath.png";
 
+let boardImg = new Image()
+                boardImg.src = "SnakeBackground.png";
+
 window.onload = function () {
     // Set board height and width
     board = document.getElementById("board");
@@ -49,9 +52,7 @@ function update() {
     }
 
     // Background of a Game
-    context.fillStyle = "#1DA11D";
-    context.fillRect(0, 0, board.width, board.height);
-
+    context.drawImage(SnakeBackground,0,0,0,0)
     // Set food color and position
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
@@ -141,10 +142,9 @@ function placeFood() {
         speedX = 0
         speedY = 0
         Score = 0
-         document.getElementById("Score").innerText = "Score: " + Score;
+            document.getElementById("Score").innerText = "Score: " + Score;
         snakeBody = []
-        context.fillStyle = "#1DA11D";
-        context.fillRect(0, 0, board.width, board.height);
+        context.drawImage(SnakeBackground,0,0,0,0)
         gameOver = false;
     }
 }
