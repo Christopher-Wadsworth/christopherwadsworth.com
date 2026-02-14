@@ -46,34 +46,6 @@ let mobileSwipeUp = false;
 let mobileSwipeDown = false;
 
 
-function handleTouch(startX, endX,
-     onSwipeLeft, onSwipeRight) {
-    var horizontalDistance = 
-    finalTouchX - initialTouchX;
-    var verticalDistance = 
-    finalTouchY - initialTouchY;
-
-    if (Math.abs(horizontalDistance) >
-     Math.abs(verticalDistance) &&
-      Math.abs(horizontalDistance) >
-       swipeThreshold) {
-        if (finalTouchX - 
-            initialTouchX < 0) {
-            onSwipeLeft(); 
-        } else {
-            onSwipeRight(); 
-        }
-    }
-}
-
-var swipeLeft = () => {
-  mobileSwipeLeft = true
-};
-
-var swipeRight = () => {
-  mobileSwipeRight = true;
-};
-
 
 
 window.onload = function () {
@@ -179,6 +151,37 @@ context.restore()
     context.drawImage(controlsImg, 0, 0, board.width, board.height)
     }
 }
+
+function handleTouch(startX, endX,
+     onSwipeLeft, onSwipeRight) {
+    var horizontalDistance = 
+    finalTouchX - initialTouchX;
+    var verticalDistance = 
+    finalTouchY - initialTouchY;
+
+    if (Math.abs(horizontalDistance) >
+     Math.abs(verticalDistance) &&
+      Math.abs(horizontalDistance) >
+       swipeThreshold) {
+        if (finalTouchX - 
+            initialTouchX < 0) {
+            onSwipeLeft(); 
+        } else {
+            onSwipeRight(); 
+        }
+    }
+}
+
+var swipeLeft = () => {
+  mobileSwipeLeft = true
+};
+
+var swipeRight = () => {
+  mobileSwipeRight = true;
+};
+
+
+
 
 // Movement of the Snake - We are using addEventListener
 function changeDirection(e) {
