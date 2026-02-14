@@ -193,7 +193,7 @@ function placeFood() {
 
   function infpoints(){
     if (e.key == "p"){
-      points += 100;
+      Score += 100;
     }
 
 
