@@ -33,7 +33,7 @@ let controlsImg = new Image()
                   controlsImg.src = "KeyCommands.png";
 let controlsBackgroundImg = new Image()
                   controlsBackgroundImg.src = "ControlsBackgroundImage.png";
-                    controlsBackgroundImg.style.opacity = "0.5";
+
 
 let directionChanged = false
 
@@ -111,7 +111,11 @@ function update() {
     }
     if (!gameGoing) {
         //Controls
-    context.drawImage(controlsBackgroundImg, 0, 0, board.width, board.height)
+      context.save()
+context.globalAlpha = .5
+ context.drawImage(controlsBackgroundImg, 0, 0, board.width, board.height)
+context.restore()
+   
     context.drawImage(controlsImg, 0, 0, board.width, board.height)
     }
 }
