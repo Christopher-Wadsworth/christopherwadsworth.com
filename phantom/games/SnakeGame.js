@@ -156,7 +156,7 @@ function placeFood() {
 
  function reset(e) {
     if (e.code == "Space" ) {
-        snakeX = blockSize * 10
+        snakeX = blockSize * 9
         snakeY = blockSize * 10
         speedX = 0
         speedY = 0
