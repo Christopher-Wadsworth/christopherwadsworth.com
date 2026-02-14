@@ -80,9 +80,8 @@ window.onload = function () {
         finalTouchY = event.
         changedTouches[0].clientY;
 
-        
-        handleTouch(initialTouchX,
-        finalTouchX, swipeLeft, swipeRight);
+
+      handleTouch(initialTouchX, initialTouchY, finalTouchX, finalTouchY);
     });
 
   
@@ -155,25 +154,21 @@ context.restore()
     }
 }
 
-function handleTouch(startX, endX,
-     onSwipeLeft, onSwipeRight) {
-    var horizontalDistance = 
-    finalTouchX - initialTouchX;
-    var verticalDistance = 
-    finalTouchY - initialTouchY;
+function handleTouch(startX, startY, endX, endY) {
+    let dx = endX - startX;
+    let dy = endY - startY;
 
-    if (Math.abs(horizontalDistance) >
-     Math.abs(verticalDistance) &&
-      Math.abs(horizontalDistance) >
-       swipeThreshold) {
-        if (finalTouchX - 
-            initialTouchX < 0) {
-            onSwipeLeft(); 
-        } else {
-            onSwipeRight(); 
-        }
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > swipeThreshold) {
+        if (dx < 0) mobileSwipeLeft = true;
+        else mobileSwipeRight = true;
+    }
+    else if (Math.abs(dy) > swipeThreshold) {
+        if (dy < 0) mobileSwipeUp = true;
+        else mobileSwipeDown = true;
     }
 }
+
+
 
 var swipeLeft = () => {
   mobileSwipeLeft = true
