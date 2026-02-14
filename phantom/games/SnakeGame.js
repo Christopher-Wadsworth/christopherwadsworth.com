@@ -48,7 +48,7 @@ let mobileSwipeDown = false;
 
 var initialTouchX, initialTouchY,
  finalTouchX, finalTouchY;
-var swipeThreshold = 100; 
+var swipeThreshold = 30; 
 
 
 window.onload = function () {
@@ -166,17 +166,9 @@ function handleTouch(startX, startY, endX, endY) {
         if (dy < 0) mobileSwipeUp = true;
         else mobileSwipeDown = true;
     }
+
+    changeDirection({});
 }
-
-
-
-var swipeLeft = () => {
-  mobileSwipeLeft = true
-};
-
-var swipeRight = () => {
-  mobileSwipeRight = true;
-};
 
 
 
