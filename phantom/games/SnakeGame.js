@@ -30,7 +30,7 @@ let boardImg = new Image()
                 boardImg.src = "SnakeBackgroundGrass.png";
 
 let controlsImg = new Image()
-                  controlsImg.src = "KeyCommands.png";
+                  controlsImg.src = "SnakeBackgroundSolid.png";
 
 let directionChanged = false
 
