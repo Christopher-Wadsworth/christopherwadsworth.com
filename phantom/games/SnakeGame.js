@@ -1,15 +1,15 @@
 let blockSize = 25;
-let total_row = 19; //total row number
-let total_col = 19; //total column number
+let total_row = 19; 
+let total_col = 19; 
 let board;
 let context;
 
 let snakeX = blockSize * 9;
 let snakeY = blockSize * 9;
 
-// Set the total number of rows and columns
-let speedX = 0;  //speed of snake in x coordinate.
-let speedY = 0;  //speed of snake in Y coordinate.
+
+let speedX = 0;  
+let speedY = 0;  
 
 let snakeBody = [];
 
@@ -37,7 +37,6 @@ let directionChanged = false
 let gameGoing = false
 
 window.onload = function () {
-    // Set board height and width
     board = document.getElementById("board");
     board.height = total_row * blockSize;
     board.width = total_col * blockSize;
@@ -46,10 +45,10 @@ window.onload = function () {
  document.getElementById("Score").innerText = "Score: " + Score;
     
     placeFood();
-    document.addEventListener("keyup", changeDirection);  //for movements
+    document.addEventListener("keyup", changeDirection);  
     document.addEventListener("keyup", reset);
 
-    // Set snake speed
+
     setInterval(update, 100);
 
 
@@ -62,9 +61,7 @@ function update() {
         return;
     }
   directionChanged = false
-    // Background of a Game
     context.drawImage(boardImg, 0, 0, board.height, board.width)
-    // Set food color and position
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
@@ -96,7 +93,7 @@ function update() {
         || snakeY < 0 
         || snakeY >= total_row * blockSize) { 
         
-        // Out of bound condition
+  
         gameOver = true;
             context.drawImage(wallDeathImg, 0, 0, board.height, board.width)
     }
@@ -110,7 +107,7 @@ function update() {
         }
     }
   function update() {
-    if (!gameGoing) {
+    if (gameGoing) {
       return;
     }
   //Controls
@@ -136,13 +133,6 @@ function changeDirection(e) {
     else if ((e.key == "a" || e.code == "ArrowLeft") && speedX != 1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = -1;
-        speedY = 0;
-      directionChanged = true;
-      gameGoing = true;
-    }
-    else if ((e.key == "d" || e.code == "ArrowRight") && speedX != -1 && directionChanged == false) { 
-        //If Right arrow key pressed
-        speedX = 1;
         speedY = 0;
       directionChanged = true;
       gameGoing = true;
