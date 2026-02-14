@@ -31,6 +31,8 @@ let boardImg = new Image()
 
 let controlsImg = new Image()
                   controlsImg.src = "KeyCommands.png";
+let controlsBackgroundImg = new Image()
+                  controlsBackgroundImg.src = "ControlsBackgroundImage.png";
 
 let directionChanged = false
 
