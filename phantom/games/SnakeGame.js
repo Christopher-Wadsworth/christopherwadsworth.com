@@ -34,6 +34,8 @@ let controlsImg = new Image()
 
 let directionChanged = false
 
+let gameGoing = false
+
 window.onload = function () {
     // Set board height and width
     board = document.getElementById("board");
@@ -54,6 +56,14 @@ window.onload = function () {
 }
 
 function update() {
+    if (gameGoing) {
+      return;
+    }
+  //Controls
+    context.drawImage(controlsImg, 0, 0, board.width, board.height)
+}
+
+function update() {
     if (gameOver) {
         return;
     }
@@ -63,9 +73,6 @@ function update() {
     // Set food color and position
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
-    //Controls
-    context.drawImage(controlsImg, 0, 0, board.width, board.height)
-  
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
         Score += 1 
@@ -115,25 +122,29 @@ function changeDirection(e) {
     if ((e.key == "w" || e.code == "ArrowUp") && speedY != 1 && directionChanged == false) { 
         speedX = 0;
         speedY = -1;
-      directionChanged = true
+      directionChanged = true;
+      gameGoing = true;
     }
     else if ((e.key == "s" || e.code == "ArrowDown") && speedY != -1 && directionChanged == false) {
         //If down arrow key pressed
         speedX = 0;
         speedY = 1;
-      directionChanged = true
+      directionChanged = true;
+      gameGoing = true;
     }
     else if ((e.key == "a" || e.code == "ArrowLeft") && speedX != 1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = -1;
         speedY = 0;
-      directionChanged = true
+      directionChanged = true;
+      gameGoing = true;
     }
     else if ((e.key == "d" || e.code == "ArrowRight") && speedX != -1 && directionChanged == false) { 
         //If Right arrow key pressed
         speedX = 1;
         speedY = 0;
-      directionChanged = true
+      directionChanged = true;
+      gameGoing = true;
     }
 }
 
