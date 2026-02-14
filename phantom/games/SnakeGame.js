@@ -50,8 +50,7 @@ window.onload = function () {
     // Set snake speed
     setInterval(update, 100);
 
-    //Controls
-    context.drawImage(controlsImg, 0, 0, board.width, board.height)
+
 }
 
 function update() {
@@ -64,6 +63,9 @@ function update() {
     // Set food color and position
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
+    //Controls
+    context.drawImage(controlsImg, 0, 0, board.width, board.height)
+  
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
         Score += 1 
