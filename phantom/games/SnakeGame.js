@@ -194,6 +194,7 @@ function placeFood() {
   function infpoints(e){
     if (e.key == "p"){
       Score =+ 100;
+      document.getElementById("Score").innerText = "Score: " + Score;
     }
   }
 
