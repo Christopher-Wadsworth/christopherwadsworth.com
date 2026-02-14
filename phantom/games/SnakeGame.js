@@ -56,7 +56,7 @@ window.onload = function () {
 }
 
 function update() {
-    if (gameGoing) {
+    if (!gameGoing) {
       return;
     }
   //Controls
