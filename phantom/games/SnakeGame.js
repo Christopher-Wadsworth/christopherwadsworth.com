@@ -18,7 +18,7 @@ let foodImg = new Image();
 let foodX;
 let foodY;
 
-let Score = 0
+let Score = 0;
 
 let gameOver = false;
 let selfDeathImg = new Image()
@@ -35,9 +35,46 @@ let controlsBackgroundImg = new Image()
                   controlsBackgroundImg.src = "ControlsBackgroundImage.png";
 
 
-let directionChanged = false
+let directionChanged = false;
 
-let gameGoing = false
+let gameGoing = false;
+
+
+let mobileSwipeLeft = false;
+let mobileSwipeRight = false;
+let mobileSwipeUp = false;
+let mobileSwipeDown = false;
+
+
+function handleTouch(startX, endX,
+     onSwipeLeft, onSwipeRight) {
+    var horizontalDistance = 
+    finalTouchX - initialTouchX;
+    var verticalDistance = 
+    finalTouchY - initialTouchY;
+
+    if (Math.abs(horizontalDistance) >
+     Math.abs(verticalDistance) &&
+      Math.abs(horizontalDistance) >
+       swipeThreshold) {
+        if (finalTouchX - 
+            initialTouchX < 0) {
+            onSwipeLeft(); 
+        } else {
+            onSwipeRight(); 
+        }
+    }
+}
+
+var swipeLeft = () => {
+  mobileSwipeLeft = true
+};
+
+var swipeRight = () => {
+  mobileSwipeRight = true;
+};
+
+
 
 window.onload = function () {
     board = document.getElementById("board");
@@ -52,6 +89,28 @@ window.onload = function () {
     document.addEventListener("keyup", reset);
     document.addEventListener("keyup", infpoints);
 
+
+      window.addEventListener
+    ('touchstart', function (event) {
+        initialTouchX = 
+        event.touches[0].clientX;
+        initialTouchY =
+         event.touches[0].clientY;
+    });
+
+    window.addEventListener
+    ('touchend', function (event) {
+        finalTouchX = event.
+        changedTouches[0].clientX;
+        finalTouchY = event.
+        changedTouches[0].clientY;
+
+        
+        handleTouch(initialTouchX,
+        finalTouchX, swipeLeft, swipeRight);
+    });
+
+  
 
     setInterval(update, 100);
 
@@ -123,32 +182,36 @@ context.restore()
 
 // Movement of the Snake - We are using addEventListener
 function changeDirection(e) {
-    if ((e.key == "w" || e.code == "ArrowUp") && speedY != 1 && directionChanged == false) { 
+    if ((e.key == "w" || e.code == "ArrowUp" || mobileSwipeUp == true) && speedY != 1 && directionChanged == false) { 
         speedX = 0;
         speedY = -1;
       directionChanged = true;
       gameGoing = true;
+      mobileSwipeUp = false;
     }
-    else if ((e.key == "s" || e.code == "ArrowDown") && speedY != -1 && directionChanged == false) {
+    else if ((e.key == "s" || e.code == "ArrowDown" || mobileSwipeDown == true) && speedY != -1 && directionChanged == false) {
         //If down arrow key pressed
         speedX = 0;
         speedY = 1;
       directionChanged = true;
       gameGoing = true;
+      mobileSwipeDown = false;
     }
-    else if ((e.key == "a" || e.code == "ArrowLeft") && speedX != 1 && directionChanged == false) {
+    else if ((e.key == "a" || e.code == "ArrowLeft" || mobileSwipeLeft == true) && speedX != 1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = -1;
         speedY = 0;
       directionChanged = true;
       gameGoing = true;
+      mobileSwipeLeft = false;
     }
-    else if ((e.key == "d" || e.code == "ArrowRight") && speedX != -1 && directionChanged == false) {
+    else if ((e.key == "d" || e.code == "ArrowRight" || mobileSwipeRight == true) && speedX != -1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = 1;
         speedY = 0;
       directionChanged = true;
       gameGoing = true;
+      mobileSwipeRight = false;
     }
 }
 
