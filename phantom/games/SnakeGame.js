@@ -29,6 +29,9 @@ let wallDeathImg = new Image()
 let boardImg = new Image()
                 boardImg.src = "SnakeBackgroundGrass.png";
 
+let controlsImg = new Image()
+                  controlsImg.src = "KeyCommands.png";
+
 let directionChanged = false
 
 window.onload = function () {
@@ -46,6 +49,9 @@ window.onload = function () {
 
     // Set snake speed
     setInterval(update, 100);
+
+    //Controls
+    context.drawImage(controlsImg, 0, 0, board.width, board.height)
 }
 
 function update() {
