@@ -104,24 +104,24 @@ function update() {
 
 // Movement of the Snake - We are using addEventListener
 function changeDirection(e) {
-    if (e.code == "ArrowUp" && speedY != 1 && directionChanged == false) { 
+    if ((e.code == "W" || e.code == "ArrowUp") && speedY != 1 && directionChanged == false) { 
         speedX = 0;
         speedY = -1;
       directionChanged = true
     }
-    else if (e.code == "ArrowDown" && speedY != -1 && directionChanged == false) {
+    else if ((e.code == "S" || e.code == "ArrowDown") && speedY != -1 && directionChanged == false) {
         //If down arrow key pressed
         speedX = 0;
         speedY = 1;
       directionChanged = true
     }
-    else if (e.code == "ArrowLeft" && speedX != 1 && directionChanged == false) {
+    else if ((e.code == "A" || e.code == "ArrowLeft") && speedX != 1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = -1;
         speedY = 0;
       directionChanged = true
     }
-    else if (e.code == "ArrowRight" && speedX != -1 && directionChanged == false) { 
+    else if ((e.code == "D" || e.code == "ArrowRight") && speedX != -1 && directionChanged == false) { 
         //If Right arrow key pressed
         speedX = 1;
         speedY = 0;
