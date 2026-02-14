@@ -60,9 +60,9 @@ window.onload = function () {
  document.getElementById("Score").innerText = "Score: " + Score;
     
     placeFood();
-    document.addEventListener("keyup", changeDirection);  
-    document.addEventListener("keyup", reset);
-    document.addEventListener("keyup", infpoints);
+    document.addEventListener("keydown", changeDirection);  
+    document.addEventListener("keydown", reset);
+    document.addEventListener("keydown", infpoints);
 
 
       window.addEventListener
