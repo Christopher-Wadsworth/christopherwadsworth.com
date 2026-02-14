@@ -112,7 +112,7 @@ function update() {
     if (!gameGoing) {
         //Controls
       context.save()
-context.globalAlpha = .45
+context.globalAlpha = .55
  context.drawImage(controlsBackgroundImg, 0, 0, board.width, board.height)
 context.restore()
    
