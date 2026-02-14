@@ -46,6 +46,9 @@ let mobileSwipeUp = false;
 let mobileSwipeDown = false;
 
 
+var initialTouchX, initialTouchY,
+ finalTouchX, finalTouchY;
+var swipeThreshold = 100; 
 
 
 window.onload = function () {
