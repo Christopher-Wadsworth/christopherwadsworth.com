@@ -195,7 +195,7 @@ function placeFood() {
     if (e.key == "p"){
       Score =+ 100;
     }
-
+  }
 
   window.addEventListener("keydown", function(e) {
     // Array of key codes or event codes to prevent (arrow keys and spacebar)
