@@ -106,13 +106,11 @@ function update() {
                 context.drawImage(selfDeathImg,0,0,board.height,board.width)
         }
     }
-  function update() {
     if (gameGoing) {
       return;
     }
   //Controls
     context.drawImage(controlsImg, 0, 0, board.width, board.height)
-}
 }
 
 // Movement of the Snake - We are using addEventListener
