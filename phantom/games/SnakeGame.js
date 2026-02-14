@@ -30,7 +30,7 @@ let boardImg = new Image()
                 boardImg.src = "SnakeBackgroundGrass.png";
 
 let controlsImg = new Image()
-                  controlsImg.src = "SnakeBackgroundSolid.png";
+                  controlsImg.src = "KeyCommands.png";
 
 let directionChanged = false
 
@@ -130,6 +130,13 @@ function changeDirection(e) {
     else if ((e.key == "a" || e.code == "ArrowLeft") && speedX != 1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = -1;
+        speedY = 0;
+      directionChanged = true;
+      gameGoing = true;
+    }
+    else if ((e.key == "d" || e.code == "ArrowRight") && speedX != -1 && directionChanged == false) {
+        //If left arrow key pressed
+        speedX = 1;
         speedY = 0;
       directionChanged = true;
       gameGoing = true;
