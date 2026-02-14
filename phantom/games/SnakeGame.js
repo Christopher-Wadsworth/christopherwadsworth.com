@@ -177,7 +177,7 @@ function placeFood() {
 
 
 
- function reset() {
+ function reset(e) {
     if (e.code == "Space" ) {
         snakeX = blockSize * 9
         snakeY = blockSize * 9
@@ -191,7 +191,7 @@ function placeFood() {
     }
 }
 
-  function infpoints(){
+  function infpoints(e){
     if (e.key == "p"){
       Score =+ 100;
     }
