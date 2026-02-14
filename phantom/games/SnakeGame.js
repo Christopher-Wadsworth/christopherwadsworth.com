@@ -5,7 +5,7 @@ let board;
 let context;
 
 let snakeX = blockSize * 9;
-let snakeY = blockSize * 10;
+let snakeY = blockSize * 9;
 
 // Set the total number of rows and columns
 let speedX = 0;  //speed of snake in x coordinate.
@@ -157,7 +157,7 @@ function placeFood() {
  function reset(e) {
     if (e.code == "Space" ) {
         snakeX = blockSize * 9
-        snakeY = blockSize * 10
+        snakeY = blockSize * 9
         speedX = 0
         speedY = 0
         Score = 0
