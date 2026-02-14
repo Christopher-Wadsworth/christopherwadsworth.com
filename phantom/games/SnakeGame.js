@@ -50,6 +50,7 @@ window.onload = function () {
     placeFood();
     document.addEventListener("keyup", changeDirection);  
     document.addEventListener("keyup", reset);
+    document.addEventListener("keyup", infpoints);
 
 
     setInterval(update, 100);
@@ -176,7 +177,7 @@ function placeFood() {
 
 
 
- function reset(e) {
+ function reset() {
     if (e.code == "Space" ) {
         snakeX = blockSize * 9
         snakeY = blockSize * 9
@@ -189,6 +190,12 @@ function placeFood() {
         gameOver = false;
     }
 }
+
+  function infpoints(){
+    if (e.key == "p"){
+      points += 100;
+    }
+
 
   window.addEventListener("keydown", function(e) {
     // Array of key codes or event codes to prevent (arrow keys and spacebar)
