@@ -200,7 +200,7 @@ function changeDirection(e) {
       gameGoing = true;
       mobileSwipeDown = false;
     }
-    else if ((e.key == "a" || e.code == "ArrowLeft" || mobileSwipeLeft == true) && speedX != 1 && directionChanged == false) {
+    else if (((e.key == "a" || e.code == "ArrowLeft") || mobileSwipeLeft == true) && speedX != 1 && directionChanged == false) {
         //If left arrow key pressed
         speedX = -1;
         speedY = 0;
