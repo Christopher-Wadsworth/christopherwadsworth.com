@@ -86,7 +86,7 @@ window.onload = function () {
 
   
 
-    setInterval(update, 100);
+    setInterval(update, 150);
 
   board = document.getElementById("board");
     context = board.getContext("2d");
