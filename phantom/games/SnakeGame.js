@@ -40,7 +40,7 @@ let directionChanged = false;
 let gameGoing = false;
 
 
-let mobileSwipeLeft = true;
+let mobileSwipeLeft = false;
 let mobileSwipeRight = false;
 let mobileSwipeUp = false;
 let mobileSwipeDown = false;
