@@ -3397,26 +3397,29 @@ span {
 				width: 100%;
 				}
 
-
-.header-content {
+#header .inner {
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
 }
 
-.headshot {
-	width: 216px;
-	height: auto;
-	border-radius: 6px; /* optional */
-	margin-left: auto;
-}
-
-.logo .title {
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
 	white-space: nowrap;
 }
 
+.headshot {
+	margin-left: auto;   /* pushes it to the right edge */
+	width: 216px;
+	height: auto;
+	border-radius: 6px;
+}
 
-
-
-
+/* Prevent extra spacing under header */
+#header {
+	margin-bottom: 0;
+}
 
 
