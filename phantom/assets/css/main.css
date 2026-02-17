@@ -3410,6 +3410,10 @@ span {
 	margin-left: auto;
 }
 
+.logo .title {
+	white-space: nowrap;
+}
+
 
 
 
