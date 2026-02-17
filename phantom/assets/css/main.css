@@ -3400,7 +3400,7 @@ span {
 
 .header-content {
 	display: flex;
-	align-items: center;
+	align-items: right;
 	justify-content: space-between;
 }
 
@@ -3409,3 +3409,4 @@ span {
 	height: auto;
 	border-radius: 6px; /* optional */
 }
+
