@@ -88,7 +88,11 @@ window.onload = function () {
 
     setInterval(update, 100);
 
+  board = document.getElementById("board");
+    context = board.getContext("2d");
 
+    resizeBoard();
+    window.addEventListener("resize", resizeBoard);
 }
 
 
