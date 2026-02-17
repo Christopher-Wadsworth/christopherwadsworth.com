@@ -3404,11 +3404,12 @@ span {
 }
 
 .headshot {
-	width: 108px;
+	width: 216px;
 	height: auto;
 	border-radius: 6px; /* optional */
 	margin-left: auto;
 }
+
 
 
 
