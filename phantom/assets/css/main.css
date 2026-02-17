@@ -3384,16 +3384,6 @@ span {
 		}
 
 
-
-
-
-
-
-
-
-
-
-
 #main .clickable:active {
 				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				background-position: center;
@@ -3408,32 +3398,14 @@ span {
 				}
 
 
+.header-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.headshot {
+	width: 216px;
+	height: auto;
+	border-radius: 6px; /* optional */
+}
