@@ -81,21 +81,37 @@ body {
     position: absolute;
     right: 20%;
     bottom: 0;
-
     width: 54%;
     height: 80%;
-
     background: var(--primary);
     text-align: center;
-
-    box-sizing: border-box;
-    padding: 25px 12.5px;
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    transition: all 1s ease-in-out;
+    transition:
+        bottom 1s ease-in-out,
+        transform 1s ease-in-out,
+        z-index 0s linear 1s;
     box-shadow: 0 0 5px var(--shadow-color);
+    padding: 25px 12.5px;
+    z-index: 1;
+}
+
+/* Opening */
+.flap .envelope .letter {
+    bottom: 125px;
+    transform: scale(1.5);
+    z-index: 5;
+    transition:
+        bottom 1s ease-in-out,
+        transform 1s ease-in-out,
+        z-index 0s linear 0.7s;
+}
+
+/* Closing */
+.envelope-wrapper:not(.flap) .letter {
+    z-index: 1;
+    transition:
+        bottom 1s ease-in-out,
+        transform 1s ease-in-out,
+        z-index 0s linear 0.7s;
 }
 
 .container .envelope-wrapper .envelope .letter .text {
