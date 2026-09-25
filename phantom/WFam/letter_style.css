@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary: #fff;
     --bg-envelope-color: #f5edd1;
     --envelope-tab: #ecdeb8;
@@ -6,160 +6,199 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
     --txt-color: #444;
     --heart-color: rgb(0, 200, 271);
+
+    /* Envelope scale */
+    --envelope-width: min(75vw, 375px);
+    --envelope-height: calc(var(--envelope-width) * 0.768);
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-height: 100vh;
     background-image: url("WFamThanksgivingBackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container {
+    width: 100%;
     height: 100vh;
     display: grid;
     place-items: center;
 }
 
 .container > .envelope-wrapper {
+    position: relative;
+    width: var(--envelope-width);
+    height: var(--envelope-height);
     background: var(--bg-envelope-color);
     box-shadow: 0 0 40px var(--shadow-color);
     transform: translateY(80px);
 }
 
-.container .envelope-wrapper .envelope{
+.container .envelope-wrapper .envelope {
     position: relative;
-    width: 375px;
-    height: 288px;
+    width: 100%;
+    height: 100%;
 }
 
-.envelope-wrapper > .envelope::before{
+.envelope-wrapper > .envelope::before {
     content: "";
     position: absolute;
     top: 0;
     z-index: 2;
-    border-top: 162.5px solid var(--envelope-tab);
-    border-right: 187.5px solid transparent;
-    border-left: 187.5px solid transparent;
+
+    border-top: calc(var(--envelope-width) * 0.4333) solid var(--envelope-tab);
+    border-right: calc(var(--envelope-width) * 0.5) solid transparent;
+    border-left: calc(var(--envelope-width) * 0.5) solid transparent;
+
     transform-origin: top;
     transition: all 0.5s ease-in-out 0.7s;
 }
 
-.container .envelope-wrapper .envelope::after{
+.container .envelope-wrapper .envelope::after {
     content: "";
     position: absolute;
     z-index: 2;
+
     width: 0;
     height: 0;
-    border-top: 162.5px solid transparent;
-    border-right: 187.5px solid var(--envelope-cover);
-    border-bottom: 125px solid var(--envelope-cover);
-    border-left: 187.5px solid var(--envelope-cover);
+
+    border-top: calc(var(--envelope-width) * 0.4333) solid transparent;
+    border-right: calc(var(--envelope-width) * 0.5) solid var(--envelope-cover);
+    border-bottom: calc(var(--envelope-width) * 0.3333) solid var(--envelope-cover);
+    border-left: calc(var(--envelope-width) * 0.5) solid var(--envelope-cover);
 }
 
-.envelope > .letter{
+.envelope > .letter {
     position: absolute;
     right: 20%;
     bottom: 0;
+
     width: 54%;
     height: 80%;
+
     background: var(--primary);
     text-align: center;
+
     transition: all 1s ease-in-out;
     box-shadow: 0 0 5px var(--shadow-color);
-    padding: 25px 12.5px;
+
+    padding: 6.7% 3.3%;
+    box-sizing: border-box;
 }
 
-.container .envelope-wrapper .envelope .letter .text{
+.container .envelope-wrapper .envelope .letter .text {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--txt-color);
     text-align: left;
-    font-size: 10px;
+    font-size: clamp(7px, 2vw, 10px);
 }
 
 /* Cloud-shaped seal */
-.heart{
+.heart {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 30px;
-    height: 20px;
+
+    width: calc(var(--envelope-width) * 0.08);
+    height: calc(var(--envelope-width) * 0.053);
+
     background: var(--heart-color);
     border-radius: 12px;
+
     z-index: 4;
+
     transform: translate(-50%, -20%);
     transition: transform 0.5s ease-in-out 1s;
+
     box-shadow: 0 1px 6px var(--shadow-color);
     cursor: pointer;
 }
 
 /* Left cloud bump */
-.heart::before{
+.heart::before {
     content: "";
     position: absolute;
-    width: 25px;
-    height: 25px;
+
+    width: calc(var(--envelope-width) * 0.0667);
+    height: calc(var(--envelope-width) * 0.0667);
+
     background: var(--heart-color);
     border-radius: 50%;
-    left: 2px;
-    top: -7px;
+
+    left: 6.7%;
+    top: -35%;
 }
 
 /* Right cloud bump */
-.heart::after{
+.heart::after {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
+
+    width: calc(var(--envelope-width) * 0.08);
+    height: calc(var(--envelope-width) * 0.08);
+
     background: var(--heart-color);
     border-radius: 50%;
-    right: 1px;
-    top: -9px;
+
+    right: 3.3%;
+    top: -45%;
 }
 
-.flap .envelope::before{
+/* Open envelope */
+.flap .envelope::before {
     transform: rotateX(180deg);
     z-index: 0;
 }
 
 .flap .envelope .letter {
-    bottom: 125px;
+    bottom: 43.4%;
     transform: scale(1.5);
     transition-delay: 1s;
 }
 
-.flap .heart{
+.flap .heart {
     transform: translate(-50%, -20%);
     transition-delay: 0.4s;
 }
+
+
+/* Password screen */
 #password-screen {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    background: transparent;
+    z-index: 9999;
+    box-sizing: border-box;
 }
 
 #password-screen input {
+    width: min(70vw, 200px);
     padding: 10px;
-    width: 200px;
     box-sizing: border-box;
+    font-size: clamp(14px, 3vw, 16px);
 }
 
 #password-screen button {
     margin-top: 10px;
     padding: 8px 20px;
+    font-size: clamp(14px, 3vw, 16px);
 }
 
 #password-screen p {
