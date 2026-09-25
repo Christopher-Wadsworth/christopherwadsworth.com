@@ -40,7 +40,7 @@ body{
     position: absolute;
     top: 0;
     z-index: 2;
-    border-top: 162.5px solid var(--envelope-tab);
+    border-top: 187.5px solid var(--envelope-tab);
     border-right: 187.5px solid transparent;
     border-left: 187.5px solid transparent;
     transform-origin: top;
@@ -53,7 +53,7 @@ body{
     z-index: 2;
     width: 0;
     height: 0;
-    border-top: 162.5px solid transparent;
+    border-top: 187.5px solid transparent;
     border-right: 187.5px solid var(--envelope-cover);
     border-bottom: 100px solid var(--envelope-cover);
     border-left: 187.5px solid var(--envelope-cover);
