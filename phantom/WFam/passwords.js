@@ -1,9 +1,7 @@
 const envelope = document.querySelector(".envelope-wrapper");
 const heart = document.querySelector(".heart");
 
-body.addEventlistener("spacedown". () => {
-      envelope.classList.toggle("flap");
-});
+
 envelope.addEventListener("mousedown", () => {
     envelope.classList.toggle("flap");
 });
@@ -63,5 +61,10 @@ function checkPassword() {
 document.getElementById("password").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         checkPassword();
+    }
+});
+document.getElementById("envelope").addEventListener("keydown", function(event) {
+    if (event.key === "Space") {
+        flap();
     }
 });
