@@ -55,7 +55,7 @@ body{
     height: 0;
     border-top: 162.5px solid transparent;
     border-right: 187.5px solid var(--envelope-cover);
-    border-bottom: 125px solid var(--envelope-cover);
+    border-bottom: 100px solid var(--envelope-cover);
     border-left: 187.5px solid var(--envelope-cover);
 }
 
