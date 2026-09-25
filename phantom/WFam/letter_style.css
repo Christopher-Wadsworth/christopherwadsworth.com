@@ -5,7 +5,7 @@
     --envelope-cover: #e6cfa7;
     --shadow-color: rgba(0, 0, 0, 0.2);
     --txt-color: #444;
-    --heart-color: rgb(50, 120, 231);
+    --heart-color: rgb(50, 150, 231);
 }
 
 body{
@@ -27,6 +27,7 @@ body{
 .container > .envelope-wrapper {
     background: var(--bg-envelope-color);
     box-shadow: 0 0 40px var(--shadow-color);
+    transform: translateY(60px);
 }
 
 .container .envelope-wrapper .envelope{
@@ -79,20 +80,44 @@ body{
     font-size: 10px;
 }
 
-/* Circle replacing the heart */
+/* Cloud-shaped seal */
 .heart{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 18.75px;
-    height: 18.75px;
+    width: 24px;
+    height: 14px;
     background: var(--heart-color);
-    border-radius: 50%;
+    border-radius: 12px;
     z-index: 4;
     transform: translate(-50%, -20%);
     transition: transform 0.5s ease-in-out 1s;
     box-shadow: 0 1px 6px var(--shadow-color);
     cursor: pointer;
+}
+
+/* Left cloud bump */
+.heart::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    border-radius: 50%;
+    left: 2px;
+    top: -7px;
+}
+
+/* Right cloud bump */
+.heart::after{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: var(--heart-color);
+    border-radius: 50%;
+    right: 1px;
+    top: -9px;
 }
 
 .flap .envelope::before{
