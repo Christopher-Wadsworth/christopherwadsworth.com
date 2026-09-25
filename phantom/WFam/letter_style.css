@@ -88,11 +88,14 @@ body {
     background: var(--primary);
     text-align: center;
 
+    box-sizing: border-box;
+    padding: 25px 12.5px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
     transition: all 1s ease-in-out;
     box-shadow: 0 0 5px var(--shadow-color);
-
-    padding: 6.7% 3.3%;
-    box-sizing: border-box;
 }
 
 .container .envelope-wrapper .envelope .letter .text {
