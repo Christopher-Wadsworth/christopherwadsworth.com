@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="letter_style.css">
 </head>
 <body>
-    <div class="container">
+
+    <!-- Password Screen -->
+    <div id="password-screen">
+        <input type="password" id="password" placeholder="Enter your code">
+        <button onclick="checkPassword()">Enter</button>
+        <p id="error"></p>
+    </div>
+
+    <!-- Envelope -->
+    <div class="container" id="main-content" style="display: none;">
         <div class="envelope-wrapper">
             <div class="envelope">
                 <div class="letter">
                     <div class="text">
-                        <strong>Congratulations Person!</strong>
+                        <strong>Congratulations <span id="person-name">Person</span>!</strong>
                         <p>You have been chosen to take part in the WFam Taskmaster event this Thanksgiving!!!!</p>
                     </div>
                 </div>
@@ -24,9 +33,26 @@
     <script>
         const envelope = document.querySelector(".envelope-wrapper");
         const heart = document.querySelector(".heart");
-        heart.addEventListener("click", ()=>{
-            envelope.classList.toggle("flap")
-        })
+
+        heart.addEventListener("click", () => {
+            envelope.classList.toggle("flap");
+        });
+
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            const name = document.getElementById("person-name");
+            const error = document.getElementById("error");
+
+            if (password === "Chris72") {
+                name.textContent = "Chris";
+
+                document.getElementById("password-screen").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            } else {
+                error.textContent = "Incorrect code.";
+            }
+        }
     </script>
+
 </body>
 </html>
