@@ -1,7 +1,7 @@
 const envelope = document.querySelector(".envelope-wrapper");
 const heart = document.querySelector(".heart");
 
-envelope.addEventListener("click", () => {
+envelope.addEventListener("mousedown", () => {
     envelope.classList.toggle("flap");
 });
 
