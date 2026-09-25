@@ -28,7 +28,21 @@ function checkPassword() {
         "Jacoby1": "Jacoby",
         "Megan1": "Megan"
 
-
+        "tom1": "Tom",
+        "nancy1": "Nancy",
+        "jon1": "Jon",
+        "anne1": "Anne",
+        "luke1": "Luke",
+        "scott1": "Scott",
+        "sarabeth1": "Sarabeth",
+        "grace1": "Grace",
+        "christopher1": "Christopher",
+        "ellie1": "Ellie",
+        "aaron1": "Aaron",
+        "averie1": "Averie",
+        "kate1": "Kate",
+        "jacoby1": "Jacoby",
+        "megan1": "Megan"
         
     };
 
