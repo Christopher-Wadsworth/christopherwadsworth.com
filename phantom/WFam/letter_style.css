@@ -92,6 +92,11 @@ body {
     box-shadow: 0 0 5px var(--shadow-color);
     padding: 25px 12.5px;
     z-index: 1;
+        box-sizing: border-box;
+    padding: 25px 12.5px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* Opening */
