@@ -12,9 +12,24 @@ function checkPassword() {
     const error = document.getElementById("error");
 
     const people = {
-        "Chris72": "Chris",
-        "Sarah84": "Sarah",
-        "Alex31": "Alex"
+        "Tom1": "Tom",
+        "Nancy1": "Nancy",
+        "Jon1": "Jon",
+        "Anne1": "Anne",
+        "Luke1": "Luke",
+        "Scott1": "Scott",
+        "Sarabeth1": "Sarabeth",
+        "Grace1": "Grace",
+        "Christopher1": "Christopher",
+        "Ellie1": "Ellie",
+        "Aaron1": "Aaron",
+        "Averie1": "Averie",
+        "Kate1": "Kate",
+        "Jacoby1": "Jacoby",
+        "Megan1": "Megan"
+
+
+        
     };
 
     if (people[password]) {
