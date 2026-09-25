@@ -1,17 +1,21 @@
-<input type="password" id="password" placeholder="Enter code">
-<button onclick="checkPassword()">Enter</button>
+const people = {
+    "Chris72": "Chris",
+    "Sarah84": "Sarah",
+    "Alex31": "Alex",
+    "Jordan55": "Jordan"
+};
 
-<p id="message">Enter the code to continue.</p>
-
-<script>
 function checkPassword() {
     const password = document.getElementById("password").value;
-    const message = document.getElementById("message");
+    const name = document.getElementById("person-name");
+    const error = document.getElementById("error");
 
-    if (password === "1234") {
-        message.textContent = "Welcome! You have access.";
+    if (people[password]) {
+        name.textContent = people[password];
+
+        document.getElementById("password-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
     } else {
-        message.textContent = "Incorrect code.";
+        error.textContent = "Incorrect code.";
     }
 }
-</script>
