@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: (WFamThanksgivingBackground.png);
+    background-image: (WFamThanksgivingBackground.png);
     display: flex;
     align-items: center;
     justify-content: center;
