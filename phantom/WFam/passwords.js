@@ -26,7 +26,8 @@ function checkPassword() {
 
         name.textContent = people[password];
 
-        document.getElementById("password-screen").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+            document.getElementById("password-screen").style.display = "none";
 
     } else {
 
