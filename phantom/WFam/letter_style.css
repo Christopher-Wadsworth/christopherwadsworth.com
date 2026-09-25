@@ -135,31 +135,36 @@ body{
     transform: translate(-50%, -20%);
     transition-delay: 0.4s;
 }
-.password-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+#password-screen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+
+    z-index: 9999;
+    box-sizing: border-box;
 }
 
-.password-screen input {
+#password-screen input {
     padding: 10px;
-    font-size: 16px;
+    width: 200px;
+    box-sizing: border-box;
 }
 
-.password-screen button {
+#password-screen button {
     margin-top: 10px;
-    padding: 8px 18px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 8px 20px;
 }
 
-.password-screen p {
-    margin-top: 10px;
+#password-screen p {
+    margin: 10px 0 0;
 }
