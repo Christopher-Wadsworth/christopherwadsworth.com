@@ -63,8 +63,8 @@ document.getElementById("password").addEventListener("keydown", function(event) 
         checkPassword();
     }
 });
-document.getElementById("envelope").addEventListener("keydown", function(event) {
-    if (event.key === "Space") {
-      envelope.classList.toggle("flap");
+document.addEventListener("keydown", function(event) {
+    if (event.code === "Space") {
+        envelope.classList.toggle("flap");
     }
 });
