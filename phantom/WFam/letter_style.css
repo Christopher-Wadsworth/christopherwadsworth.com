@@ -27,8 +27,8 @@
 }
 .container .envelope-wrapper .envelope{
     position: relative;
-    width: 300px;
-    height: 230px;
+    width: 600px;
+    height: 460px;
 }
 .envelope-wrapper > .envelope::before{
     content: "";
