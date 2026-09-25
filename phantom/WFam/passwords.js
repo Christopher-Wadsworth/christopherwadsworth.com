@@ -65,6 +65,6 @@ document.getElementById("password").addEventListener("keydown", function(event) 
 });
 document.getElementById("envelope").addEventListener("keydown", function(event) {
     if (event.key === "Space") {
-        flap();
+      envelope.classList.toggle("flap");
     }
 });
