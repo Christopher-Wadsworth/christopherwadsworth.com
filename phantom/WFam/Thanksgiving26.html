@@ -30,29 +30,7 @@
         </div>
     </div>
 
-    <script>
-        const envelope = document.querySelector(".envelope-wrapper");
-        const heart = document.querySelector(".heart");
-
-        heart.addEventListener("click", () => {
-            envelope.classList.toggle("flap");
-        });
-
-        function checkPassword() {
-            const password = document.getElementById("password").value;
-            const name = document.getElementById("person-name");
-            const error = document.getElementById("error");
-
-            if (password === "Chris72") {
-                name.textContent = "Chris";
-
-                document.getElementById("password-screen").style.display = "none";
-                document.getElementById("main-content").style.display = "block";
-            } else {
-                error.textContent = "Incorrect code.";
-            }
-        }
-    </script>
-
 </body>
+    
+   <script src="passwords.js"></script>
 </html>
