@@ -4,32 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Invitation</title>
+
     <link rel="stylesheet" href="letter_style.css">
 </head>
+
 <body>
 
     <!-- Password Screen -->
     <div id="password-screen">
-        <input type="text" id="password" placeholder="Enter your code">
+
+        <input
+            type="text"
+            id="password"
+            placeholder="Enter your code"
+        >
+
         <button onclick="checkPassword()">Enter</button>
+
         <p id="error"></p>
+
     </div>
+
 
     <!-- Envelope -->
-    <div class="container" id="main-content" style="display: none;">
+    <div
+        class="container"
+        id="main-content"
+        style="display: none;"
+    >
+
         <div class="envelope-wrapper">
+
             <div class="envelope">
+
                 <div class="letter">
-                    <div class="text" id="letter-text"></div>
+
+                    <div
+                        class="text"
+                        id="letter-text"
+                    ></div>
+
                 </div>
-                </div>
+
+            </div>
+
             <div class="heart"></div>
+
         </div>
+
     </div>
 
 
-     <script src="passwords.js"></script>
+    <script src="passwords.js"></script>
+
 </body>
-    
-  
 </html>
