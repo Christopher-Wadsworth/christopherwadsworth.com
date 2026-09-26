@@ -71,6 +71,7 @@ function checkPassword() {
 
     if (people[password]) {
         name.textContent = people[password];
+        letterText.innerHTML = people[password].letter;
         
         document.getElementById("password-screen").style.display = "none";
         document.getElementById("main-content").style.display = "grid";
