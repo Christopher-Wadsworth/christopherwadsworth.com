@@ -28,8 +28,6 @@ function checkPassword() {
         "Kate1": "Kate",
         "Jacoby1": "Jacoby",
         "Megan1": "Megan",
-        "Lian1": "Lian",
-        "lian1": "lian",
         
         "tom1": "Tom",
         "nancy1": "Nancy",
