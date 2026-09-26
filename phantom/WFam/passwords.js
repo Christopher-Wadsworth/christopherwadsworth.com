@@ -108,6 +108,11 @@ const customLetters = {
          <p>By reaching this page you have gained an extra 6.7 bonus points that you will be rewarded. In order to redeem these points you must screenshot this page and send that photo to Christopher. These points will be rewarded during the game. If you mention these points to anyone before they are awarded, you will not only forfeit these bonus points, you will lose an additional 6.7 points.</p>
          <strong>Happy tasking :) </strong>
      `
+     "grace1": `
+         <strong>You shouldn't be here...</strong>
+         <p>By reaching this page you have gained an extra 6.7 bonus points that you will be rewarded. In order to redeem these points you must screenshot this page and send that photo to Christopher. These points will be rewarded during the game. If you mention these points to anyone before they are awarded, you will not only forfeit these bonus points, you will lose an additional 6.7 points.</p>
+         <strong>Happy tasking :) </strong>
+     `
 };
 
 
