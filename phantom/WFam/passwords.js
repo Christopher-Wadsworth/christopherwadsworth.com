@@ -6,21 +6,21 @@ envelope.addEventListener("mousedown", () => {
 
 
 const people = {
-    "tom1": "Tom",
-    "nancy1": "Nancy",
-    "jon1": "Jon",
-    "anne1": "Anne",
-    "luke1": "Luke",
-    "scott1": "Scott",
-    "sarabeth1": "Sarabeth",
-    "grace1": "Grace",
-    "christopher1": "Christopher",
-    "ellie1": "Ellie",
-    "aaron1": "Aaron",
-    "averie1": "Averie",
-    "kate1": "Kate",
-    "jacoby1": "Jacoby",
-    "megan1": "Megan"
+    "tom72": "Tom",
+    "nancy72": "Nancy",
+    "jon72": "Jon",
+    "anne72": "Anne",
+    "luke72": "Luke",
+    "scott72": "Scott",
+    "sarabeth72": "Sarabeth",
+    "grace72": "Grace",
+    "christopher72": "Christopher",
+    "ellie72": "Ellie",
+    "aaron72": "Aaron",
+    "averie72": "Averie",
+    "kate72": "Kate",
+    "jacoby72": "Jacoby",
+    "megan72": "Megan"
 };
 
 
@@ -76,7 +76,7 @@ function defaultLetter(name) {
 
 const customLetters = {
 
-     "luke1": `
+     "luke72": `
         <strong>Congratulations Luke!</strong>
         <p></p>
         <p>You have been chosen to take part in the WFam Taskmaster event this Thanksgiving!!!!</p>
@@ -103,12 +103,12 @@ const customLetters = {
 
         <strong>Approved by <i>Taskmaster Grace</i></strong>     `,
 
-    "christopher1": `
+    "christopher72": `
          <strong>You shouldn't be here...</strong>
          <p>By reaching this page you have gained an extra 6.7 bonus points that you will be rewarded. In order to redeem these points you must screenshot this page and send that photo to Christopher. These points will be rewarded during the game. If you mention these points to anyone before they are awarded, you will not only forfeit these bonus points, you will lose an additional 6.7 points.</p>
          <strong>Happy tasking :) </strong>
      `
-     "grace1": `
+     "grace72": `
          <strong>You shouldn't be here...</strong>
          <p>By reaching this page you have gained an extra 6.7 bonus points that you will be rewarded. In order to redeem these points you must screenshot this page and send that photo to Christopher. These points will be rewarded during the game. If you mention these points to anyone before they are awarded, you will not only forfeit these bonus points, you will lose an additional 6.7 points.</p>
          <strong>Happy tasking :) </strong>
