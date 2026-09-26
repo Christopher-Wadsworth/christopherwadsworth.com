@@ -78,26 +78,18 @@ const customLetters = {
 
      "luke1": `
         <strong>Congratulations Luke!</strong>
-        <p>SIX SEVEN</p>
-
+        <p></p>
         <p>You have been chosen to take part in the WFam Taskmaster event this Thanksgiving!!!!</p>
-
         <p>This will be an event like none other seen before with the WFam. A gameshow of brains, brawns, and sheer WFam Talent!!!</p>
-
         <p>For your reference, here is an episode of the gameshow this event is based on 
         <a href="https://www.youtube.com/watch?v=DpV3rweizNA" target="_blank">
         <i>Season 4 Ep 1</i></a></p>
-
-        <p>This event will be extraordinary and eventful with an eternity of hard work being put into it. But fear not, before the event there are just 4 things we need from you:</p>
-
+        <p>This event will be extraordinary and eventful with an eternity of hard work being put into it. But fear not, before the event there are just 5 things we need from you:</p>
         <p>1. With the other WFam members in your household, create a 30 second clip that will be played in reverse on the day of the event. The coolest 30 second clip will win the task. One person in your team (household) should share this video with Christopher before we meet in Chicago.</p>
-
         <p>2. Bring with you to the event an item that you believe best describes the WFam. You will present this item at the start of the event and will be judged by Grace on who brought the best item that fits that description.</p>
-
         <p>3. Send Christopher a photo of yourself that you would like to be your podium image. This photo should be funny while also instilling fear into your opponents.</p>
-
         <p>4. Bring your A game and leave the chances of defeat at home.</p>
-
+        <p>5. Record a 10 minute video of yourself. The person who records the most red colored vehicles wins. You must begin at your front door.</p>
         <p>If there are any questions, do not hesitate to message me with them.</p>
 
         <strong>On behalf of your almighty Taskmaster - Best of luck,</strong>
