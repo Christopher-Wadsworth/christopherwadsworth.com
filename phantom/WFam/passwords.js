@@ -6,21 +6,21 @@ envelope.addEventListener("mousedown", () => {
 
 
 const people = {
-    "tom72": "Tom",
-    "nancy72": "Nancy",
-    "jon72": "Jon",
-    "anne72": "Anne",
-    "luke72": "Luke",
-    "scott72": "Scott",
-    "sarabeth72": "Sarabeth",
-    "grace72": "Grace",
-    "christopher72": "Christopher",
-    "ellie72": "Ellie",
-    "aaron72": "Aaron",
-    "averie72": "Averie",
-    "kate72": "Kate",
-    "jacoby72": "Jacoby",
-    "megan72": "Megan"
+    "tom1972": "Tom",
+    "nancy1972": "Nancy",
+    "jon1978": "Jon",
+    "anne1972": "Anne",
+    "luke1972": "Luke",
+    "scott1972": "Scott",
+    "sarabeth1972": "Sarabeth",
+    "grace2002": "Grace",
+    "christopher2007": "Christopher",
+    "ellie2008": "Ellie",
+    "aaron2008": "Aaron",
+    "averie2010": "Averie",
+    "kate2010": "Kate",
+    "jacoby2013": "Jacoby",
+    "megan2017": "Megan"
 };
 
 
