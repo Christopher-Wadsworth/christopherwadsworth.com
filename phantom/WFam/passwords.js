@@ -88,8 +88,8 @@ const customLetters = {
         <p>1. With the other WFam members in your household, create a 30 second clip that will be played in reverse on the day of the event. The coolest 30 second clip will win the task. One person in your team (household) should share this video with Christopher before we meet in Chicago.</p>
         <p>2. Bring with you to the event an item that you believe best describes the WFam. You will present this item at the start of the event and will be judged by Grace on who brought the best item that fits that description.</p>
         <p>3. Send Christopher a photo of yourself that you would like to be your podium image. This photo should be funny while also instilling fear into your opponents.</p>
-        <p>4. Bring your A game and leave the chances of defeat at home.</p>
-        <p>5. Record a 10 minute video of yourself. The person who records the most red colored vehicles on the streets wins. You must begin at your front door. Send this video to Christopher and be sure to keep your number a secret - don't let others know when you are completing this task.</p>
+        <p>4. Record a 10 minute video of yourself. The person who records the most red colored vehicles on the streets wins. You must begin at your front door. Send this video to Christopher at least a week before Thanksgiving and be sure to keep your number a secret - don't let others know when you are completing this task.</p>
+        <p>5. Bring your A game and leave the chances of defeat at home.</p>
         <p>If there are any questions, do not hesitate to message me with them.</p>
 
         <strong>On behalf of your almighty Taskmaster - Best of luck,</strong>
