@@ -10,11 +10,8 @@ const people = {
     "nancy1954": "Nancy",
     "jon1978": "Jon",
     "anne1981": "Anne",
-    "luke1983": "Luke",
     "scott1983": "Scott",
     "sarabeth1981": "Sarabeth",
-    "grace2002": "Grace",
-    "christopher2007": "Christopher",
     "ellie2008": "Ellie",
     "aaron2008": "Aaron",
     "averie2010": "Averie",
@@ -76,7 +73,7 @@ function defaultLetter(name) {
 
 const customLetters = {
 
-     "luke72": `
+     "luke1983": `
         <strong>Congratulations Luke!</strong>
         <p></p>
         <p>You have been chosen to take part in the WFam Taskmaster event this Thanksgiving!!!!</p>
@@ -103,12 +100,12 @@ const customLetters = {
 
         <strong>Approved by <i>Taskmaster Grace</i></strong>     `,
 
-    "christopher72": `
+    "christopher2007": `
          <strong>You shouldn't be here...</strong>
          <p>By reaching this page you have gained an extra 2 bonus points that you will be rewarded. In order to redeem these points you must screenshot this page and send that photo to Christopher. These points will be rewarded during the game. If you mention these points to anyone before they are awarded, you will not only forfeit these bonus points, you will lose an additional 2 points.</p>
          <strong>Happy tasking :) </strong>
      `,
-     "grace72": `
+     "grace2002": `
          <strong>You shouldn't be here...</strong>
          <p>By reaching this page you have gained an extra 2 bonus points that you will be rewarded. In order to redeem these points you must screenshot this page and send that photo to Christopher. These points will be rewarded during the game. If you mention these points to anyone before they are awarded, you will not only forfeit these bonus points, you will lose an additional 2 points.</p>
          <strong>Happy tasking :) </strong>
